@@ -1,0 +1,145 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.aboutContainer {
+	@include flex(column, 0, start, center);
+	width: 100%;
+	height: 100vh;
+	.innerContainer {
+		@include flex(row, 0, center, center);
+		height: 100%;
+		.leftSection {
+			@include flex(column, 5rem, center, center);
+			width: 100%;
+			height: 100%;
+			div {
+				width: 150px;
+				height: 150px;
+				background-color: coral;
+				animation: squareToCircle 8s 10s infinite alternate;
+			}
+			.topDiv {
+				margin: 0 16rem 5rem 0;
+				z-index: 1;
+			}
+			.border {
+				position: absolute;
+				height: 450px;
+				width: 350px;
+				border: 5px solid #000;
+			}
+			.bottomDiv {
+				margin: 3rem 0 0 16rem;
+			}
+			@keyframes squareToCircle {
+				0% {
+					border-radius: 0 0 0 0;
+					background: coral;
+					transform: rotate(0deg);
+				}
+				25% {
+					border-radius: 50% 0 0 0;
+					background: darksalmon;
+					transform: rotate(45deg);
+				}
+				50% {
+					border-radius: 50% 50% 0 0;
+					background: indianred;
+					transform: rotate(90deg);
+				}
+				75% {
+					border-radius: 50% 50% 50% 0;
+					background: lightcoral;
+					transform: rotate(135deg);
+				}
+				100% {
+					border-radius: 50% 50% 50% 50%;
+					background: darksalmon;
+					transform: rotate(180deg);
+				}
+			}
+
+			img {
+				position: absolute;
+				height: 400px;
+				width: 300px;
+				z-index: 1;
+			}
+		}
+		.midSection {
+			background-color: rgb(201, 205, 209);
+			width: 10px;
+			height: 75%;
+			border-radius: 10px;
+		}
+		.rightSection {
+			@include flex(column, 0, center, center);
+			width: 100%;
+			height: 100%;
+			.aboutDetails {
+				padding: 0 10%;
+				.name {
+					@include fontStyle(2rem, 700, "");
+					&::first-line {
+						text-decoration: underline;
+					}
+					.experience {
+						height: 50px;
+						position: relative;
+						.year {
+							@include flex(row, 5px, start, center);
+							margin-top: 0.5rem;
+						}
+						.projects {
+							@include flex(row, 5px, start, center);
+							height: 50px;
+						}
+						.text {
+							color: rgb(53, 55, 55);
+							@include fontStyle(1rem, 700, "");
+						}
+						.number {
+							@include fontStyle(1rem, 700, "");
+							color: rgb(96, 96, 94);
+						}
+					}
+				}
+
+				.address {
+					.text {
+						color: rgb(53, 55, 55);
+						@include fontStyle(1rem, 700, "");
+					}
+					.number {
+						@include fontStyle(1rem, 700, "");
+						color: rgb(96, 96, 94);
+					}
+					.quote {
+						.number {
+							font-style: italic;
+						}
+					}
+				}
+				.description {
+					width: 80%;
+					p {
+						color: rgb(62, 66, 66);
+						@include fontStyle(1.3rem, 700, "");
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.contactContainer {
+	@include flex(column, 3rem, center, center);
+	width: 100%;
+	margin-bottom: 3rem;
+	height: 100vh;
+	.contactInnerContainer {
+		@include flex(row, 0, space-around, start);
+		width: 75%;
+		padding: 1rem 0;
+		border-radius: 5px;
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+		.contactTitles {
+			@include flex(column, 0, center, start);
+			width: 35%;
+			margin: auto;
+			h1 {
+				@include fontStyle(2.5rem, 700, "");
+				margin-bottom: 0;
+			}
+			p {
+				@include fontStyle(1.1rem, 700, "");
+				color: rgb(123, 126, 126);
+				width: 70%;
+			}
+			.socialHandles {
+				@include flex(row, 1rem, center, center);
+				a {
+					height: 50px;
+					width: 50px;
+					border-radius: 50%;
+					cursor: pointer;
+					img {
+						height: 100%;
+						width: 100%;
+					}
+					transition: 1s ease;
+
+					&:hover {
+						-webkit-transform: scale(1.1);
+						-ms-transform: scale(1.1);
+						transform: scale(1.1);
+						transition: 0.3s ease;
+					}
+				}
+			}
+			.contactTypes {
+				@include flex(column, 1rem, center, start);
+				margin-bottom: 1rem;
+				.item {
+					@include flex(row, 0.5rem, start, center);
+					span {
+						@include fontStyle(1.2rem, 700, "");
+						color: rgb(65, 62, 62);
+					}
+				}
+			}
+		}
+
+		form {
+			@include flex(row, 1.3rem, start, center);
+			flex-wrap: wrap;
+			width: 50%;
+			padding: 1rem 0;
+			margin-right: 2rem;
+			div {
+				@include flex(column, 0, center, "");
+				width: 100%;
+				label {
+					@include fontStyle(1rem, 700, "");
+					background-color: #fff;
+					position: absolute;
+					margin: -3.3rem 0 0 1rem;
+					padding: 0 0.5rem;
+					span {
+						color: red;
+					}
+				}
+				input {
+					height: 3rem;
+					@include fontStyle(1rem, 500, "");
+					outline: none;
+					padding-left: 0.5rem;
+					border: 2px solid black;
+				}
+			}
+			.nameField,
+			.mailField {
+				width: 48%;
+			}
+			.messageField {
+				@include flex(column, 0, start, start);
+				width: 100%;
+				label {
+					height: fit-content;
+					margin-top: -0.7rem;
+				}
+				textarea {
+					padding: 1rem;
+					width: 94%;
+					height: 200px;
+					border: 2px solid black;
+				}
+			}
+			button {
+				@include fontStyle(1.2rem, 700, "");
+				width: 100%;
+				padding: 1rem 0;
+				background-color: black;
+				color: #fff;
+				cursor: pointer;
+				&:hover {
+					background-color: rgb(44, 41, 41);
+				}
+			}
+		}
+	}
+}

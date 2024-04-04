@@ -1,0 +1,168 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.HeroContainer {
+	@include flex(row, 0, space-between, center);
+	width: 100%;
+	height: 92vh;
+	text-align: center;
+	.leftSection {
+		@include flex(column, 1rem, center, center);
+		height: 100%;
+		width: 100%;
+		padding: 0 10%;
+		.title {
+			@include fontStyle(5rem, 700, 5rem);
+			text-align: left;
+			.o {
+				color: rgb(255, 0, 55);
+			}
+			.dev {
+				// color: rgb(23, 88, 106);
+				span {
+					color: rgb(255, 0, 55);
+				}
+			}
+		}
+		.subtitle {
+			@include flex(row, 10px, start, center);
+			@include fontStyle(2rem, 800, "");
+			width: 100%;
+			text-align: left;
+			span {
+				color: rgb(255, 0, 55);
+			}
+		}
+		p {
+			@include fontStyle(1.3rem, 500, "");
+			text-align: left;
+			margin: 0;
+		}
+		.buttonContainer {
+			@include flex(row, 2rem, start, center);
+			width: 100%;
+			margin-top: 0.6rem;
+			button {
+				@include fontStyle(1rem, 700, "");
+				border-radius: 0.8rem;
+				border: none;
+				box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+					rgba(0, 0, 0, 0.05) 0px 5px 10px;
+			}
+			.resumeBtn {
+				background-color: transparent;
+				border: 2px solid rgb(255, 0, 55);
+				color: rgb(255, 0, 55);
+				padding: 15px 3rem;
+				transition: 0.3s;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+			.hireBtn {
+				background-color: rgb(255, 0, 55);
+				color: #fff;
+				transition: 0.3s;
+				padding: 1rem 3rem;
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+	.RightSection {
+		@include flex(row, 0, center, center);
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		position: relative;
+		overflow: hidden;
+		.box {
+			width: 45%;
+			height: 55%;
+			position: relative;
+			box-shadow: 10px 10px 42px 0 rgba(240, 57, 57, 0.75);
+		}
+		.box:after,
+		.box:before {
+			mix-blend-mode: multiply;
+			filter: none;
+			z-index: -1;
+			content: "";
+			width: calc(100% + (50px * 2));
+			height: calc(100% + (50px * 2));
+			position: absolute;
+			display: block;
+			animation: border 10s ease-in-out infinite;
+			transform: translateX(-50px) translateY(-50px);
+		}
+		@keyframes border {
+			0%,
+			100% {
+				-webkit-clip-path: polygon(
+					0 0,
+					calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+					100% 100%,
+					calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+				);
+				clip-path: polygon(
+					0 0,
+					calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+					100% 100%,
+					calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+				);
+			}
+			50% {
+				-webkit-clip-path: polygon(
+					calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+					100% 0,
+					calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+					0 100%
+				);
+				clip-path: polygon(
+					calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+					100% 0,
+					calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+					0 100%
+				);
+			}
+		}
+
+		.box:after {
+			animation-delay: -5s;
+			background-color: rgb(255, 0, 55);
+			clip-path: polygon(
+				0 0,
+				calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)),
+				100% 100%,
+				calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px))
+			);
+		}
+		.box:before {
+			background-color: #32c0e3;
+			clip-path: polygon(
+				calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)),
+				100% 0,
+				calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)),
+				0 100%
+			);
+		}
+
+		img {
+			position: absolute;
+			height: 55%;
+			width: 45%;
+		}
+	}
+}

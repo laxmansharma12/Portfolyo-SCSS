@@ -1,0 +1,30 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.footerContainer {
+	@include flex(row, 0, center, center);
+	height: 5rem;
+	background-color: black;
+	.FooterInnerContainer {
+		@include flex(row, 0.2rem, space-around, center);
+		color: rgb(170, 177, 177);
+		.developer {
+			@include flex(row, 0.2rem, center, center);
+			.name {
+				font-style: italic;
+				text-decoration: underline;
+			}
+		}
+	}
+}

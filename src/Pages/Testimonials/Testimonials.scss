@@ -1,0 +1,68 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.testimonialsContainer {
+	@include flex(column, 2rem, center, center);
+	width: 100%;
+	padding-bottom: 3rem;
+	h3 {
+		margin-top: 3rem;
+	}
+	.testimonialsInnerContainer {
+		width: 75%;
+		margin: auto;
+		flex-wrap: wrap;
+		.testimonial {
+			width: 100%;
+			.item {
+				@include flex(row, 2rem, center, start);
+				width: 520px;
+				height: 230px;
+				padding: 1rem;
+				margin: auto;
+				box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+					rgb(209, 213, 219) 0px 0px 0px 1px inset;
+				border-radius: 5px;
+				.left {
+					@include flex(column, 0, center, center);
+					width: 100%;
+					img {
+						height: 180px;
+						width: 190px;
+						border-radius: 5px;
+					}
+					.name {
+						@include fontStyle(1.4rem, 700, "");
+					}
+					.position {
+						@include fontStyle(0.9rem, 700, "");
+						color: rgb(92, 89, 89);
+					}
+				}
+				.review {
+					@include fontStyle(1rem, 700, "");
+					margin-top: 0;
+					font-style: oblique;
+					height: 100%;
+					color: rgb(92, 89, 89);
+					span {
+						position: absolute;
+						padding: 0 0 0 5px;
+						@include fontStyle(2rem, "", "");
+					}
+				}
+			}
+		}
+	}
+}

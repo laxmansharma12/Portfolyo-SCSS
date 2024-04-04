@@ -1,0 +1,99 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.timelineConatiner {
+	@include flex(column, 3rem, center, center);
+	padding: 3rem 0;
+
+	.timelineInnerConatiner {
+		@include flex(row, 3rem, center, start);
+		width: 75%;
+
+		.ItemsContainer {
+			@include flex(column, 1rem, start, center);
+			width: 50%;
+			p {
+				@include fontStyle(2rem, 700, "");
+			}
+			.Item {
+				width: 100%;
+				border-top: 1px solid black;
+				border-right: 3px solid black;
+				border-bottom: 0;
+				border-left: 0;
+				.nameContainer {
+					@include flex(row, 0, space-between, center);
+					position: relative;
+					h1 {
+						@include fontStyle(1.5rem, 700, "");
+					}
+					div {
+						@include flex(row, 0, center, center);
+						@include fontStyle(1.5rem, 700, "");
+						position: absolute;
+						border: 3px solid black;
+						padding: 0.4rem;
+						border-radius: 50%;
+						background-color: #fff;
+						top: -1.3rem;
+						left: 96.2%;
+						box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+							rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+							rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+					}
+				}
+				.itemBody {
+					width: 100%;
+					@include flex(column, 0, start, start);
+					.titleContainer {
+						width: 100%;
+						color: rgb(52, 50, 47);
+						h3 {
+							margin-top: 0;
+						}
+						@include flex(row, 0, space-between, center);
+						.subTitleContainer {
+							@include flex(column, 0, center, start);
+							@include fontStyle(1rem, 700, "");
+						}
+					}
+					.summary {
+						p {
+							@include fontStyle(1rem, 500, "");
+							margin: 1rem 0 0 0;
+						}
+					}
+					.list {
+						padding-left: 1.2rem;
+						li {
+							margin-bottom: 0.3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.Answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 2s; /* Change timing function */
+	padding: 0px 18px;
+}
+
+.show {
+	max-height: 9999px;
+	transition: max-height 2s ease-in-out; /* Change timing function */
+}
