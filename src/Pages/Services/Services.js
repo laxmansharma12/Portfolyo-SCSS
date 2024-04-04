@@ -17,7 +17,7 @@ const Services = () => {
 				{enabledServices &&
 					enabledServices.map((service) => (
 						<div className="serviceItem" key={service.id}>
-							<img src={service.image.url} />
+							<img src={service.image.url} alt="" />
 							<div className="serviceDesc">
 								<label className="name">{service.name}</label>
 								<p className="description">{service.desc}</p>

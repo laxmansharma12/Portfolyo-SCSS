@@ -14,6 +14,7 @@ const AboutPage = () => {
 					<img
 						data-cursor-text={data?.about?.name}
 						src={data?.about?.avatar?.url}
+						alt=""
 					/>
 					<label className="border"></label>
 					<div className="bottomDiv"></div>

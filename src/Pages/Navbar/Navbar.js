@@ -8,7 +8,7 @@ const Navbar = () => {
 	return (
 		<Headroom>
 			<div className="Nav">
-				<a href="#" className="logo">
+				<a href="#home" className="logo">
 					{data?.about?.name.substring(0, 1)}
 					<span>{data?.about?.name.substring(1, 2)}</span>
 					{data?.about?.name.substring(2, 4)}

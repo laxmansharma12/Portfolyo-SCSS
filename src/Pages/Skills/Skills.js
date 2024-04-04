@@ -22,7 +22,7 @@ const Skills = () => {
 								<div className="skillRow" key={index}>
 									<div className="skillItem1">
 										<div className="item1">
-											<img src={skill?.image?.url} />
+											<img src={skill?.image?.url} alt="" />
 											<div className="skillDetails">
 												<p className="skillName">{skill?.name}</p>
 												<div className="percentage">
@@ -59,7 +59,7 @@ const Skills = () => {
 														></div>
 													</div>
 												</div>
-												<img src={sortedSkills[index + 1]?.image?.url} />
+												<img src={sortedSkills[index + 1]?.image?.url} alt="" />
 											</div>
 										</div>
 									)}

@@ -21,7 +21,7 @@ const HomePage = () => {
 			<div className="navbar">
 				<Navbar />
 			</div>
-			<div className="topContainer">
+			<div id="home" className="topContainer">
 				<div id="hero" className="hero">
 					<Hero />
 				</div>

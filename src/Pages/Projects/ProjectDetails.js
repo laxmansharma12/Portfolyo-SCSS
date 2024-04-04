@@ -13,7 +13,7 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
 			style={{ top: 0 }}
 		>
 			<div className="project">
-				<img src={project.image.url} />
+				<img src={project.image.url} alt="" />
 				<div className="techStackContainer">
 					{project.techStack?.map((tech, i) => (
 						<div className="techStack" key={i}>

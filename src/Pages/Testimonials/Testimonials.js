@@ -84,7 +84,7 @@ const Testimonials = () => {
 							<div className="testimonial" key={index}>
 								<div className="item">
 									<div className="left">
-										<img src={testimonial.image?.url} />
+										<img src={testimonial.image?.url} alt="" />
 										<label className="name">{testimonial.name}</label>
 										<label className="position">{testimonial.position}</label>
 									</div>

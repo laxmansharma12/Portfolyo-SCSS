@@ -32,7 +32,7 @@ const Contact = () => {
 					<div className="socialHandles">
 						{data?.social_handles?.map((icons) => (
 							<a href={icons.url}>
-								<img src={icons.image?.url} />
+								<img src={icons.image?.url} alt="" />
 							</a>
 						))}
 					</div>
