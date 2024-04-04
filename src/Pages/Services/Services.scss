@@ -14,8 +14,8 @@
 
 .servicesContainer {
 	@include flex(column, 0, center, center);
-	h3 {
-		margin: 2rem 0;
+	.divider {
+		margin: 1rem 0 2rem 0;
 	}
 	.InnerContainer {
 		@include flex(row, 2rem, center, center);

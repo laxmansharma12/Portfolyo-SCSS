@@ -12,11 +12,10 @@ const Hero = () => {
 					{data?.about?.title.substring(0, 1)}
 					<span className="o">{data?.about?.title.substring(1, 2)}</span>
 					{data?.about?.title.substring(2, 8)}
-					<span className="dev">
-						{data?.about?.title.substring(8, 14)}
-						<span>{data?.about?.title.substring(14, 15)}</span>
-						{data?.about?.title.substring(15, 18)}
-					</span>
+					<br />
+					{data?.about?.title.substring(9, 14)}
+					<span className="o">{data?.about?.title.substring(14, 15)}</span>
+					{data?.about?.title.substring(15, 18)}
 				</div>
 				<div className="subtitle">
 					{data?.about?.subTitle.substring(0, 9)}

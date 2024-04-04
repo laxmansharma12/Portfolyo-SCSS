@@ -30,7 +30,9 @@ const Timeline = () => {
 
 	return (
 		<div className="timelineConatiner">
-			<h3>RESUME</h3>
+			<div class="divider">
+				<span>RESUME</span>
+			</div>
 			<div className="timelineInnerConatiner">
 				<div className="ItemsContainer">
 					<p>Education</p>

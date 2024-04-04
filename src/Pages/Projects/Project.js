@@ -21,7 +21,9 @@ const Project = ({ setOpenModal }) => {
 
 	return (
 		<div className="ProjectContainer">
-			<h3>MY PROJECTS</h3>
+			<div class="divider">
+				<span>PORTFOLIO</span>
+			</div>
 			<div className="projectInnerContainer">
 				{allProjects &&
 					allProjects.slice(0, displayedProjects).map((project, index) => (

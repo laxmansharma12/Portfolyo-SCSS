@@ -12,7 +12,9 @@ const Skills = () => {
 
 	return (
 		<div className="skillsContainer">
-			<h3>SKILLS</h3>
+			<div class="divider">
+				<span>MY SKILLS</span>
+			</div>
 			<div className="SkillsInnerConatiner">
 				{sortedSkills &&
 					sortedSkills.map(

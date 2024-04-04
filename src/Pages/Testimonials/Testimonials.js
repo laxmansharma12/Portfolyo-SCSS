@@ -76,7 +76,9 @@ const Testimonials = () => {
 
 	return (
 		<div className="testimonialsContainer">
-			<h3>TESTIMONIALS</h3>
+			<div class="divider">
+				<span>TESTIMONIALS</span>
+			</div>
 			<div className="testimonialsInnerContainer">
 				<Slider {...settings}>
 					{enabledTestimonials &&

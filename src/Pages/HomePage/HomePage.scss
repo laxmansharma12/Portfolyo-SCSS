@@ -6,6 +6,38 @@
 	gap: $gap;
 }
 
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.divider {
+	@include flex(row, 0, center, center);
+	@include fontStyle(4.5vh, 700, "");
+	text-shadow: 1px 1px 1px rgba(145, 186, 188, 0.45);
+	border-radius: 10px;
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		height: 0.09em;
+		min-width: 30vw;
+	}
+
+	&::before {
+		border-radius: 10px;
+		background: linear-gradient(to right, rgba(240, 240, 240, 0), #1d1b1b);
+		margin-right: 4vh;
+	}
+
+	&::after {
+		border-radius: 10px;
+		background: linear-gradient(to left, rgba(240, 240, 240, 0), #121111);
+		margin-left: 4vh;
+	}
+}
+
 p {
 	cursor: pointer;
 }

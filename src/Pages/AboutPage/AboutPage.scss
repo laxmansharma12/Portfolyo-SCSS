@@ -16,6 +16,11 @@
 	@include flex(column, 0, start, center);
 	width: 100%;
 	height: 100vh;
+
+	.divider {
+		margin-top: 3rem;
+	}
+
 	.innerContainer {
 		@include flex(row, 0, center, center);
 		height: 100%;

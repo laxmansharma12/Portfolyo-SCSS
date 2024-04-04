@@ -7,7 +7,9 @@ const AboutPage = () => {
 
 	return (
 		<div className="aboutContainer">
-			<h3>ABOUT ME</h3>
+			<div class="divider">
+				<span>ABOUT ME</span>
+			</div>
 			<div className="innerContainer">
 				<div className="leftSection">
 					<div className="topDiv"></div>

@@ -12,7 +12,9 @@ const Services = () => {
 
 	return (
 		<div className="servicesContainer">
-			<h3>MY SERVICES</h3>
+			<div class="divider">
+				<span>MY SERVICES</span>
+			</div>
 			<div className="InnerContainer">
 				{enabledServices &&
 					enabledServices.map((service) => (

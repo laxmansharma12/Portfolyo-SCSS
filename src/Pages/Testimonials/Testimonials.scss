@@ -16,9 +16,11 @@
 	@include flex(column, 2rem, center, center);
 	width: 100%;
 	padding-bottom: 3rem;
-	h3 {
-		margin-top: 3rem;
+
+	.divider {
+		margin: 3rem 0;
 	}
+
 	.testimonialsInnerContainer {
 		width: 75%;
 		margin: auto;

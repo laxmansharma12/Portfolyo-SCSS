@@ -25,6 +25,7 @@
 		.title {
 			@include fontStyle(5rem, 700, 5rem);
 			text-align: left;
+			width: 100%;
 			.o {
 				color: rgb(255, 0, 55);
 			}
@@ -40,6 +41,7 @@
 			@include fontStyle(2rem, 800, "");
 			width: 100%;
 			text-align: left;
+			padding-left: 1rem;
 			span {
 				color: rgb(255, 0, 55);
 			}
@@ -48,6 +50,7 @@
 			@include fontStyle(1.3rem, 500, "");
 			text-align: left;
 			margin: 0;
+			padding-left: 0.7rem;
 		}
 		.buttonContainer {
 			@include flex(row, 2rem, start, center);

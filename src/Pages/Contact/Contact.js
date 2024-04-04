@@ -9,7 +9,9 @@ const Contact = () => {
 	const data = useData();
 	return (
 		<div className="contactContainer">
-			<h3>Contact</h3>
+			<div class="divider">
+				<span>CONTACT</span>
+			</div>
 			<div className="contactInnerContainer">
 				<div className="contactTitles">
 					<h1>Get In Touch</h1>

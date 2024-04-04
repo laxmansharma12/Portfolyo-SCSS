@@ -6,6 +6,12 @@
 	gap: $gap;
 }
 
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
 .Nav {
 	@include flex(row, 0, space-around, center);
 	background-color: #ace0f9;
@@ -36,10 +42,10 @@
 			padding: 0;
 		}
 		.nav a {
+			@include fontStyle(1rem, 700, "");
 			padding: 0.3em 0.7em;
 			position: relative;
 			color: #000;
-			font-weight: 500;
 			text-decoration: none;
 			cursor: pointer;
 		}
