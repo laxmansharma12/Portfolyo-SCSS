@@ -1,0 +1,65 @@
+@mixin flex($direction, $gap, $justifyContent, $alignItems) {
+	display: flex;
+	justify-content: $justifyContent;
+	align-items: $alignItems;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+@mixin fontStyle($fontSize, $fontWeight, $lineHeight) {
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	line-height: $lineHeight;
+}
+
+.youtubeContainer {
+	@include flex(row, 1rem, center, center);
+	width: 75%;
+	margin: auto;
+	background-color: black;
+	.video {
+		position: relative;
+		@include flex(column, 1rem, center, center);
+		padding: 2rem 0;
+		img {
+			height: 55%;
+			width: 90%;
+			position: absolute;
+			object-fit: cover;
+			border: none;
+			outline: none;
+		}
+		label {
+			@include fontStyle(1.1rem, 700, "");
+			color: #fff;
+			position: absolute;
+			z-index: 1;
+			top: 2rem;
+			left: 2%;
+		}
+		.PlayPausebutton {
+			position: absolute;
+
+			.button {
+				position: relative;
+
+				div {
+					@include flex(row, 0, center, center);
+					height: 70px;
+					width: 70px;
+					border-radius: 50%;
+					background-color: rgb(163, 148, 148);
+					&:hover {
+						background-color: rgb(199, 186, 186);
+					}
+				}
+				button {
+					background-color: transparent;
+					position: absolute;
+					border: none;
+					outline: none;
+				}
+			}
+		}
+	}
+}

@@ -12,6 +12,7 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Scrollbar from "../ScrollBar/Scrollbar";
 import Timeline from "../Timeline/Timeline";
+import Youtube from "../Youtube/Youtube";
 
 const HomePage = () => {
 	const [openModal, setOpenModal] = useState({ state: false, project: null });
@@ -46,6 +47,9 @@ const HomePage = () => {
 			</div>
 			<div id="testimonials" className="testimonials">
 				<Testimonials />
+			</div>
+			<div className="youtube">
+				<Youtube />
 			</div>
 			<div id="contact" className="contact">
 				<Contact />
