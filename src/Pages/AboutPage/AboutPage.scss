@@ -15,7 +15,6 @@
 .aboutContainer {
 	@include flex(column, 0, start, center);
 	width: 100%;
-	display: none;
 	height: 100vh;
 
 	.divider {
@@ -154,6 +153,41 @@
 	.aboutContainer {
 		height: 70vh;
 		.innerContainer {
+			.leftSection {
+				div {
+					width: 105px;
+					height: 105px;
+				}
+				.border {
+					height: 390px;
+					width: 290px;
+				}
+				img {
+					height: 350px;
+					width: 250px;
+				}
+			}
+			.midSection {
+				height: 65%;
+			}
+			.rightSection {
+				.aboutDetails {
+					padding-left: 5%;
+					.description {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.aboutContainer {
+		border: 1px solid red;
+		height: 100vh;
+		.innerContainer {
+			@include flex(column, 0, center, center);
 			.leftSection {
 				div {
 					width: 105px;

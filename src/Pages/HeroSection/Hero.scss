@@ -209,8 +209,9 @@
 				@include fontStyle(3rem, 700, 3rem);
 			}
 			.subtitle {
+				border: 1px solid red;
 				@include fontStyle(1.4rem, 700, "");
-				width: 80%;
+				width: 85%;
 			}
 			p {
 				@include fontStyle(1rem, 500, "");
@@ -218,7 +219,6 @@
 			}
 			.buttonContainer {
 				@include flex(row, 0, space-around, center);
-				padding: 0 0 1.2rem 0;
 			}
 		}
 		.RightSection {

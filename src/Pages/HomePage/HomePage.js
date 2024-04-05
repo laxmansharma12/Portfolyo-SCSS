@@ -30,7 +30,7 @@ const HomePage = () => {
 					<AboutPage />
 				</div>
 			</div>
-			<div className="midContainer">
+			{/* <div className="midContainer">
 				<div id="services" className="services">
 					<Services />
 				</div>
@@ -60,7 +60,7 @@ const HomePage = () => {
 			{openModal.state && (
 				<ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
 			)}
-			<Scrollbar />
+			<Scrollbar /> */}
 		</div>
 	);
 };
