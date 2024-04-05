@@ -51,6 +51,8 @@ const Testimonials = () => {
 					slidesToScroll: 1,
 					infinite: true,
 					dots: true,
+					nextArrow: false,
+					prevArrow: false,
 				},
 			},
 		],
@@ -74,9 +76,10 @@ const Testimonials = () => {
 									</div>
 
 									<p className="review">
-										<ImQuotesLeft size={30} /> {testimonial.review}
+										<ImQuotesLeft className="icon" size={30} />{" "}
+										{testimonial.review}
 										<span>
-											<ImQuotesRight size={30} />
+											<ImQuotesRight className="icon" size={30} />
 										</span>
 									</p>
 								</div>

@@ -45,10 +45,10 @@ const HomePage = () => {
 			<div id="timeline" className="timeline">
 				<Timeline />
 			</div>
-			{/*<div id="testimonials" className="testimonials">
+			<div id="testimonials" className="testimonials">
 				<Testimonials />
 			</div>
-			<div className="youtube">
+			{/*<div className="youtube">
 				<Youtube />
 			</div>
 			<div id="contact" className="contact">

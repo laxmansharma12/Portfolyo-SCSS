@@ -80,3 +80,47 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.testimonialsContainer {
+		.divider {
+			margin: 0;
+		}
+		.testimonialsInnerContainer {
+			width: 90%;
+			.testimonial {
+				.item {
+					@include flex(row, 1rem, start, center);
+					width: 640px;
+					padding: 5px;
+					height: 200px;
+
+					.left {
+						@include flex(column, 0, center, center);
+						width: fit-content;
+
+						img {
+							height: 130px;
+							width: 130px;
+							border-radius: 5px;
+						}
+						.name {
+							@include fontStyle(1rem, 700, "");
+						}
+						.position {
+							@include fontStyle(0.6rem, 500, "");
+							color: rgb(92, 89, 89);
+						}
+					}
+					.review {
+						@include fontStyle(0.6rem, 700, "");
+						margin-top: 1rem;
+						padding-right: 0.5rem;
+						padding-bottom: 0.5rem;
+						width: 155px;
+					}
+				}
+			}
+		}
+	}
+}
