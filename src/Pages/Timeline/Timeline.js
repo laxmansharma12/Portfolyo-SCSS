@@ -35,7 +35,7 @@ const Timeline = () => {
 			</div>
 			<div className="timelineInnerConatiner">
 				<div className="ItemsContainer">
-					<p>Education</p>
+					<p className="title">Education</p>
 					{education &&
 						education.map((item, i) => (
 							<div className="Item">
@@ -77,7 +77,7 @@ const Timeline = () => {
 				</div>
 
 				<div className="ItemsContainer">
-					<p>Experience</p>
+					<p className="title">Experience</p>
 					{experience &&
 						experience.map((item, i) => (
 							<div className="Item">

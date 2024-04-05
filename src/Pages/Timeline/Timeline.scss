@@ -114,3 +114,31 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.timelineConatiner {
+		.timelineInnerConatiner {
+			@include flex(column, 3rem, center, start);
+			width: 90%;
+			.ItemsContainer {
+				@include flex(column, 1rem, start, center);
+				width: 95%;
+				p.title {
+					@include fontStyle(1.6rem, 700, "");
+					margin: 0 0 1rem 0;
+					text-decoration: underline;
+				}
+				.Item {
+					.nameContainer {
+						h1 {
+							@include fontStyle(1.2rem, 700, "");
+						}
+						div {
+							left: 93%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
