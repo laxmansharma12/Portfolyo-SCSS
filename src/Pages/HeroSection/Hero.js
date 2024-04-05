@@ -40,7 +40,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className="RightSection">
-				<div class="box"></div>
+				<div className="box"></div>
 				<img
 					data-cursor-text={data?.about?.name}
 					src={data?.about?.avatar?.url}

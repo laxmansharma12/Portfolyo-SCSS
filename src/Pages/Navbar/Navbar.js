@@ -29,7 +29,7 @@ const Navbar = () => {
 				</a>
 
 				<div className="NavItems">
-					<ul class="nav">
+					<ul className="nav">
 						<li>
 							<a href="#about">About</a>
 						</li>
@@ -60,7 +60,7 @@ const Navbar = () => {
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 					{isOpen && (
 						<div className="mobNavItems">
-							<ul class="nav">
+							<ul className="nav">
 								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#about">About</a>
 								</li>

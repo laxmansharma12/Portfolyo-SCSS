@@ -31,7 +31,7 @@ const HomePage = () => {
 				</div>
 			</div>
 			<div className="midContainer">
-				<div id="services" className="services">
+				<div id="services" Name="services">
 					<Services />
 				</div>
 

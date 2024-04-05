@@ -59,7 +59,7 @@ const Testimonials = () => {
 
 	return (
 		<div className="testimonialsContainer">
-			<div class="divider">
+			<div className="divider">
 				<span>TESTIMONIALS</span>
 			</div>
 			<div className="testimonialsInnerContainer">

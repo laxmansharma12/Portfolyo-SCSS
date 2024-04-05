@@ -12,7 +12,7 @@ const Services = () => {
 
 	return (
 		<div className="servicesContainer">
-			<div class="divider">
+			<div className="divider">
 				<span>MY SERVICES</span>
 			</div>
 			<div className="InnerContainer">

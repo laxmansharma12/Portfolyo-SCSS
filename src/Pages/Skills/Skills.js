@@ -12,7 +12,7 @@ const Skills = () => {
 
 	return (
 		<div className="skillsContainer">
-			<div class="divider">
+			<div className="divider">
 				<span>MY SKILLS</span>
 			</div>
 			<div className="SkillsInnerConatiner">

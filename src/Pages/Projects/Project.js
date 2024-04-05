@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import "./Project.scss";
 import { useData } from "../../Context/DataProvider";
 import { FaAnglesDown } from "react-icons/fa6";
+import { Radio } from "antd";
 
 const Project = ({ setOpenModal }) => {
 	const data = useData();
 	const [displayedProjects, setDisplayedProjects] = useState(6);
+	const [tech, setTech] = useState("All");
+	const [filtered, setFiltered] = useState([]);
 
 	if (!data || !data.projects) {
 		return null;
@@ -15,18 +18,48 @@ const Project = ({ setOpenModal }) => {
 		.filter((project) => project.enabled === true)
 		.sort((a, b) => a.sequence - b.sequence);
 
+	const handleTechChange = (e) => {
+		const techToFilter = e.toLowerCase();
+
+		const filterByTech = allProjects.filter((project) =>
+			project.techStack.some((tech) =>
+				tech.toLowerCase().includes(techToFilter)
+			)
+		);
+		setTech(e);
+		setFiltered(filterByTech);
+	};
+
 	const handleMoreClick = () => {
 		setDisplayedProjects(allProjects.length);
 	};
 
 	return (
 		<div className="ProjectContainer">
-			<div class="divider">
+			<div className="divider">
 				<span>PORTFOLIO</span>
 			</div>
+			<div className="radiogroup">
+				<Radio.Group
+					value={tech}
+					onChange={(e) => handleTechChange(e.target.value)}
+					buttonStyle="solid"
+					size={window.innerWidth <= 640 ? "small" : "large"}
+				>
+					<>
+						<Radio.Button value="All">All</Radio.Button>
+						<Radio.Button value="Reactjs">Reactjs</Radio.Button>
+						<Radio.Button value="Nextjs">Nextjs</Radio.Button>
+						<Radio.Button value="Mern">Mern</Radio.Button>
+						<Radio.Button value="CSS">CSS</Radio.Button>
+						<Radio.Button value="TailwindCSS">TailwindCSS</Radio.Button>
+					</>
+				</Radio.Group>
+			</div>
 			<div className="projectInnerContainer">
-				{allProjects &&
-					allProjects.slice(0, displayedProjects).map((project, index) => (
+				{(filtered.length === 0 ? allProjects : filtered)
+					.slice(0, displayedProjects)
+					.map((project, index) => (
 						<div
 							className="project"
 							key={index}
@@ -47,6 +80,7 @@ const Project = ({ setOpenModal }) => {
 						</div>
 					))}
 			</div>
+
 			{displayedProjects < allProjects.length && (
 				<div className="moreBtn" onClick={handleMoreClick}>
 					<label>more</label>

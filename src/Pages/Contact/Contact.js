@@ -9,7 +9,7 @@ const Contact = () => {
 	const data = useData();
 	return (
 		<div className="contactContainer">
-			<div class="divider">
+			<div className="divider">
 				<span>CONTACT</span>
 			</div>
 			<div className="contactInnerContainer">
