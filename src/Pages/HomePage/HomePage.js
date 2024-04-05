@@ -30,7 +30,7 @@ const HomePage = () => {
 					<AboutPage />
 				</div>
 			</div>
-			{/* <div className="midContainer">
+			<div className="midContainer">
 				<div id="services" className="services">
 					<Services />
 				</div>
@@ -39,7 +39,7 @@ const HomePage = () => {
 					<Skills />
 				</div>
 			</div>
-			<div id="project" className="projects">
+			{/*<div id="project" className="projects">
 				<Project openModal={openModal} setOpenModal={setOpenModal} />
 			</div>
 			<div id="timeline" className="timeline">

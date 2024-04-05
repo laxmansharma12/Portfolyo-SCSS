@@ -101,3 +101,48 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.servicesContainer {
+		.divider {
+			margin: 1rem 0 0 0;
+		}
+		.InnerContainer {
+			gap: 0.8rem;
+			.serviceItem {
+				@include flex(row, 0.5rem, start, center);
+				width: 95%;
+				img {
+					height: 8rem;
+					width: 8rem;
+					object-fit: fill;
+				}
+				.serviceDesc {
+					.name {
+						@include fontStyle(1.1rem, 700, "");
+					}
+					.description {
+						@include fontStyle(0.8rem, 500, "");
+						margin-top: 0.5rem;
+					}
+				}
+				.charge {
+					height: 35px;
+					padding-top: 0;
+					width: 27px;
+					.text {
+						@include fontStyle(0.5rem, 700, "");
+					}
+					.price {
+						@include fontStyle(0.6rem, 700, "");
+					}
+				}
+				.charge:after {
+					border-bottom: 11px solid #fff;
+					border-left: 17px solid transparent;
+					border-right: 17px solid transparent;
+				}
+			}
+		}
+	}
+}

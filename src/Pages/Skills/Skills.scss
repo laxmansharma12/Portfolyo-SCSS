@@ -128,3 +128,38 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.skillsContainer {
+		margin-top: 0rem;
+		.SkillsInnerConatiner {
+			margin-top: 0rem;
+			@include flex(row, 1rem, center, center);
+			.item {
+				@include flex(row, 0, space-around, start);
+				height: 65px;
+				width: 140px;
+				padding: 0.5rem;
+				border-radius: 5px;
+				position: relative;
+				.skillDetails {
+					@include flex(column, 0.5rem, center, center);
+					padding-right: 0;
+					.skillName {
+						@include fontStyle(90%, 700, "");
+						margin: 0;
+					}
+					.percentage {
+						[role="progressbar"] {
+							--size: 40px;
+						}
+					}
+				}
+				img {
+					height: 100%;
+					width: 50%;
+				}
+			}
+		}
+	}
+}

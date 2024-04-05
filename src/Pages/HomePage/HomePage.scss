@@ -72,3 +72,15 @@ p {
 		@include fontStyle(2vh, 700, "");
 	}
 }
+
+@media (max-width: 640px) {
+	.divider {
+		&::before {
+			margin-right: 2vh;
+		}
+
+		&::after {
+			margin-left: 2vh;
+		}
+	}
+}
