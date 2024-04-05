@@ -40,7 +40,7 @@ const Project = ({ setOpenModal }) => {
 									</div>
 								))}
 							</div>
-							<label className="techName">{project.title}</label>
+							<label className="projectName">{project.title}</label>
 							<p className="projectDesc">
 								{project.description.substring(0, 147)} ...
 							</p>
