@@ -78,3 +78,16 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.project {
+		.buttonsContainer {
+			@include flex(row, 1rem, center, center);
+			.codeBtn,
+			.liveBtn {
+				@include fontStyle(1rem, 700, "");
+				width: 40%;
+			}
+		}
+	}
+}

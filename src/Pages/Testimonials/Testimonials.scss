@@ -89,6 +89,7 @@
 		.testimonialsInnerContainer {
 			width: 90%;
 			.testimonial {
+				border: 1px solid red;
 				.item {
 					@include flex(row, 1rem, start, center);
 					width: 640px;
