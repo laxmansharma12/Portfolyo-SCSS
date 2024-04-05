@@ -206,31 +206,30 @@
 		.leftSection {
 			width: 95%;
 			.title {
-				@include fontStyle(3rem, 700, 3rem);
+				@include fontStyle(2.8rem, 700, 2.8rem);
 			}
 			.subtitle {
-				border: 1px solid red;
 				@include fontStyle(1.4rem, 700, "");
 				width: 85%;
 			}
 			p {
 				@include fontStyle(1rem, 500, "");
 				width: 100%;
+				padding: 0;
 			}
 			.buttonContainer {
 				@include flex(row, 0, space-around, center);
 			}
 		}
 		.RightSection {
-			order: 1;
 			.box {
-				height: 230px;
-				width: 180px;
+				height: 200px;
+				width: 160px;
 			}
 			img {
 				position: absolute;
-				height: 230px;
-				width: 180px;
+				height: 200px;
+				width: 160px;
 			}
 		}
 	}
