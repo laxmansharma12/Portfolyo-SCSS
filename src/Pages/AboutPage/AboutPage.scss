@@ -184,32 +184,56 @@
 
 @media (max-width: 640px) {
 	.aboutContainer {
-		border: 1px solid red;
-		height: 100vh;
+		height: fit-content;
 		.innerContainer {
 			@include flex(column, 0, center, center);
 			.leftSection {
+				height: 20rem;
 				div {
-					width: 105px;
-					height: 105px;
+					width: 50px;
+					height: 50px;
+				}
+				.topDiv {
+					margin: 0 12rem 5rem 0;
+					z-index: 1;
+				}
+
+				.bottomDiv {
+					margin: 1rem 0 0 12rem;
 				}
 				.border {
-					height: 390px;
-					width: 290px;
+					height: 260px;
+					width: 200px;
 				}
 				img {
-					height: 350px;
-					width: 250px;
+					height: 240px;
+					width: 180px;
 				}
 			}
+
 			.midSection {
-				height: 65%;
+				display: none;
 			}
+
 			.rightSection {
 				.aboutDetails {
-					padding-left: 5%;
+					text-align: center;
+					padding: 0;
+					.name {
+						.experience {
+							.year {
+								@include flex(row, 5px, center, center);
+							}
+							.projects {
+								@include flex(row, 5px, center, center);
+							}
+						}
+					}
 					.description {
-						width: 100%;
+						p {
+							@include fontStyle(1rem, 500, "");
+							width: 340px;
+						}
 					}
 				}
 			}

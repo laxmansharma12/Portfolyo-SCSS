@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.scss";
 import { useData } from "../../Context/DataProvider";
 import Headroom from "react-headroom";
@@ -7,6 +7,18 @@ import Hamburger from "hamburger-react";
 const Navbar = () => {
 	const data = useData();
 	const [isOpen, setOpen] = useState(false);
+	const ele = useRef();
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (ele.current && !ele.current.contains(event.target)) {
+				setOpen(!isOpen);
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	});
 	return (
 		<Headroom>
 			<div className="Nav">
@@ -47,30 +59,30 @@ const Navbar = () => {
 				<div className="mobileNav">
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 					{isOpen && (
-						<div className="mobNavItems">
+						<div className="mobNavItems" ref={ele}>
 							<ul class="nav">
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#about">About</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#services">Services</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#skills">Skills</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#project">Projects</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#timeline">Education</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#timeline">Experience</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#testimonials">Testimonial</a>
 								</li>
-								<li>
+								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#contact">Contact</a>
 								</li>
 							</ul>
