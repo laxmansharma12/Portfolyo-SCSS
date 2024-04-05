@@ -88,10 +88,11 @@
 @media (max-width: 840px) {
 	.Nav {
 		@include flex(row, 0, space-between, center);
-
 		.logo {
+			@include fontStyle(2.3rem, 700, "");
 			margin-left: 1rem;
 		}
+
 		.mobileNav {
 			margin-right: 1rem;
 		}
