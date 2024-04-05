@@ -89,10 +89,10 @@
 		.testimonialsInnerContainer {
 			width: 90%;
 			.testimonial {
-				border: 1px solid red;
+				width: 100%;
 				.item {
 					@include flex(row, 1rem, start, center);
-					width: 640px;
+					width: 100%;
 					padding: 5px;
 					height: 200px;
 
@@ -116,9 +116,9 @@
 					.review {
 						@include fontStyle(0.6rem, 700, "");
 						margin-top: 1rem;
-						padding-right: 0.5rem;
+						padding-right: 1rem;
 						padding-bottom: 0.5rem;
-						width: 155px;
+						width: 100%;
 					}
 				}
 			}
