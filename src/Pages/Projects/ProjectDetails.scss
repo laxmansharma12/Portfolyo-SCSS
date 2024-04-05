@@ -81,6 +81,11 @@
 
 @media (max-width: 640px) {
 	.project {
+		img {
+			width: 97%;
+			height: 180px;
+			object-fit: contain;
+		}
 		.buttonsContainer {
 			@include flex(row, 1rem, center, center);
 			.codeBtn,
