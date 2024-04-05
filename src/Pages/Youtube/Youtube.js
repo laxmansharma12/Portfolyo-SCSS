@@ -37,7 +37,7 @@ const Youtube = () => {
 							light={false}
 							controls={true}
 							pip={true}
-							width={window.innerWidth <= 640 ? "100%" : ""}
+							width={window.innerWidth <= 640 ? "100%" : "40rem"}
 							height={window.innerWidth <= 640 ? "100%" : ""}
 						/>
 
@@ -50,10 +50,12 @@ const Youtube = () => {
 											<button onClick={() => handleTogglePlay()}>
 												{isPlaying ? (
 													<FaPause
-														size={window.innerWidth <= 640 ? "20" : ""}
+														size={window.innerWidth <= 640 ? "20" : "25"}
 													/>
 												) : (
-													<FaPlay size={window.innerWidth <= 640 ? "20" : ""} />
+													<FaPlay
+														size={window.innerWidth <= 640 ? "20" : "25"}
+													/>
 												)}
 											</button>
 										</div>
