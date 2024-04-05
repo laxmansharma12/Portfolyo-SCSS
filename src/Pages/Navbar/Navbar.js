@@ -11,7 +11,7 @@ const Navbar = () => {
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (ele.current && !ele.current.contains(event.target)) {
-				setOpen(!isOpen);
+				setOpen(false);
 			}
 		};
 		document.addEventListener("mousedown", handleClickOutside);

@@ -39,10 +39,10 @@ const HomePage = () => {
 					<Skills />
 				</div>
 			</div>
-			{/*<div id="project" className="projects">
+			<div id="project" className="projects">
 				<Project openModal={openModal} setOpenModal={setOpenModal} />
 			</div>
-			<div id="timeline" className="timeline">
+			{/*<div id="timeline" className="timeline">
 				<Timeline />
 			</div>
 			<div id="testimonials" className="testimonials">
