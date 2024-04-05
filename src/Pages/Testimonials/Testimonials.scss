@@ -68,3 +68,15 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.testimonialsContainer {
+		.testimonialsInnerContainer {
+			.testimonial {
+				.item {
+					width: 560px;
+				}
+			}
+		}
+	}
+}

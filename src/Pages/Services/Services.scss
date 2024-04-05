@@ -89,3 +89,15 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.servicesContainer {
+		.InnerContainer {
+			margin-top: 2rem;
+			gap: 1.5rem;
+			.serviceItem {
+				width: 45rem;
+			}
+		}
+	}
+}

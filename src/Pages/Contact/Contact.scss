@@ -131,3 +131,30 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.contactContainer {
+		height: fit-content;
+		margin-top: 3rem;
+		.contactInnerContainer {
+			width: 90%;
+			padding: 0;
+			.contactTitles {
+				@include flex(column, 0, start, start);
+				margin-top: 0;
+				width: 40%;
+			}
+			form {
+				.nameField,
+				.mailField {
+					width: 47%;
+				}
+				.messageField {
+					textarea {
+						width: 90.5%;
+					}
+				}
+			}
+		}
+	}
+}

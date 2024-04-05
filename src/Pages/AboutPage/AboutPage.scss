@@ -15,6 +15,7 @@
 .aboutContainer {
 	@include flex(column, 0, start, center);
 	width: 100%;
+	display: none;
 	height: 100vh;
 
 	.divider {
@@ -142,6 +143,39 @@
 						color: rgb(62, 66, 66);
 						@include fontStyle(1.3rem, 500, "");
 						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 840px) {
+	.aboutContainer {
+		height: 70vh;
+		.innerContainer {
+			.leftSection {
+				div {
+					width: 105px;
+					height: 105px;
+				}
+				.border {
+					height: 390px;
+					width: 290px;
+				}
+				img {
+					height: 350px;
+					width: 250px;
+				}
+			}
+			.midSection {
+				height: 65%;
+			}
+			.rightSection {
+				.aboutDetails {
+					padding-left: 5%;
+					.description {
+						width: 100%;
 					}
 				}
 			}

@@ -14,3 +14,10 @@
 		left: 32%;
 	}
 }
+
+@media (max-width: 840px) {
+	.progressbar {
+		bottom: 10px;
+		right: 0px;
+	}
+}

@@ -169,3 +169,62 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.HeroContainer {
+		@include flex(column, 0, space-between, center);
+		.leftSection {
+			order: 2;
+			width: 100%;
+			padding: 0;
+			.title {
+				text-align: center;
+			}
+			.subtitle {
+				width: 60%;
+			}
+			p {
+				text-align: center;
+				width: 90%;
+			}
+			.buttonContainer {
+				@include flex(row, 2rem, center, center);
+			}
+		}
+		.RightSection {
+			order: 1;
+			.box {
+				width: 35%;
+			}
+			img {
+				position: absolute;
+				height: 55%;
+				width: 35%;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.HeroContainer {
+		height: 100vh;
+		.leftSection {
+			width: 95%;
+			.title {
+				@include fontStyle(3rem, 700, 3rem);
+			}
+			.subtitle {
+				@include fontStyle(1.1rem, 700, "");
+				width: 75%;
+			}
+			p {
+				@include fontStyle(1.1rem, 500, "");
+				width: 95%;
+			}
+			.buttonContainer {
+				@include flex(row, 1rem, center, center);
+				padding: 0 0 1.2rem 0;
+			}
+		}
+	}
+}

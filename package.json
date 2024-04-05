@@ -5,9 +5,11 @@
   "dependencies": {
     "antd": "^5.16.0",
     "axios": "^1.6.8",
+    "hamburger-react": "^2.5.0",
     "i": "^0.3.7",
     "npm": "^10.5.1",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-headroom": "^3.2.1",
     "react-hot-toast": "^2.4.1",

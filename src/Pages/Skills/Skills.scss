@@ -117,3 +117,14 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.skillsContainer {
+		margin-top: 3rem;
+		.SkillsInnerConatiner {
+			margin-top: 3rem;
+			@include flex(row, 2rem, center, start);
+			width: 100%;
+		}
+	}
+}

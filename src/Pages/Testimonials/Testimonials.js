@@ -45,27 +45,9 @@ const Testimonials = () => {
 		prevArrow: <Arrow />,
 		responsive: [
 			{
-				breakpoint: 1320,
+				breakpoint: 840,
 				settings: {
-					slidesToShow: 4,
-					slidesToScroll: 1,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 1135,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					infinite: true,
-					dots: true,
-				},
-			},
-			{
-				breakpoint: 554,
-				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 					infinite: true,
 					dots: true,

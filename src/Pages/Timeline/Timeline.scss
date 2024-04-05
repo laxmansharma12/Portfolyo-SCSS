@@ -97,3 +97,20 @@
 	max-height: 9999px;
 	transition: max-height 2s ease-in-out; /* Change timing function */
 }
+
+@media (max-width: 840px) {
+	.timelineConatiner {
+		.timelineInnerConatiner {
+			width: 88%;
+			.ItemsContainer {
+				.Item {
+					.nameContainer {
+						div {
+							left: 94%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

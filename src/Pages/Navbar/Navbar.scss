@@ -85,3 +85,56 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.Nav {
+		@include flex(row, 0, space-between, center);
+
+		.logo {
+			margin-left: 1rem;
+		}
+		.mobileNav {
+			margin-right: 1rem;
+		}
+		.NavItems {
+			display: none;
+		}
+		.mobNavItems {
+			position: absolute;
+			width: 30%;
+			top: 2.7rem;
+			right: 0;
+			transition: top 0.5s ease;
+			.nav {
+				@include flex(column, 1rem, start, start);
+				padding: 1rem;
+				border-radius: 0 0 0 10px;
+				background-color: #ace0f9;
+				list-style: none;
+				a {
+					@include fontStyle(1rem, 700, "");
+					padding: 0.3em 0.7em;
+					position: relative;
+
+					color: #000;
+					text-decoration: none;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 840px) {
+	.mobileNav {
+		display: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.Nav {
+		.mobNavItems {
+			position: absolute;
+			width: 40%;
+		}
+	}
+}

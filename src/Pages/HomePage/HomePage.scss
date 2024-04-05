@@ -66,3 +66,9 @@ p {
 		z-index: 1000;
 	}
 }
+
+@media (max-width: 840px) {
+	.divider {
+		@include fontStyle(2vh, 700, "");
+	}
+}

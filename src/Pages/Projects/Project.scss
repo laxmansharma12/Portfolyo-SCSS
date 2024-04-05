@@ -92,3 +92,16 @@
 		}
 	}
 }
+
+@media (max-width: 840px) {
+	.ProjectContainer {
+		margin: 3rem 0;
+		.projectInnerContainer {
+			@include flex(row, 1.5rem, center, center);
+			width: 100%;
+			.project {
+				width: 320px;
+			}
+		}
+	}
+}
