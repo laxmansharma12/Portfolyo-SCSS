@@ -29,12 +29,6 @@
 			.o {
 				color: rgb(255, 0, 55);
 			}
-			.dev {
-				// color: rgb(23, 88, 106);
-				span {
-					color: rgb(255, 0, 55);
-				}
-			}
 		}
 		.subtitle {
 			@include flex(row, 10px, start, center);
@@ -194,12 +188,13 @@
 		.RightSection {
 			order: 1;
 			.box {
-				width: 35%;
+				height: 330px;
+				width: 250px;
 			}
 			img {
 				position: absolute;
-				height: 55%;
-				width: 35%;
+				height: 330px;
+				width: 250px;
 			}
 		}
 	}
@@ -214,16 +209,28 @@
 				@include fontStyle(3rem, 700, 3rem);
 			}
 			.subtitle {
-				@include fontStyle(1.1rem, 700, "");
-				width: 75%;
+				@include fontStyle(1.4rem, 700, "");
+				width: 80%;
 			}
 			p {
 				@include fontStyle(1.1rem, 500, "");
-				width: 95%;
+				width: 100%;
 			}
 			.buttonContainer {
-				@include flex(row, 1rem, center, center);
+				@include flex(row, 0, space-around, center);
 				padding: 0 0 1.2rem 0;
+			}
+		}
+		.RightSection {
+			order: 1;
+			.box {
+				height: 230px;
+				width: 190px;
+			}
+			img {
+				position: absolute;
+				height: 230px;
+				width: 190px;
 			}
 		}
 	}
