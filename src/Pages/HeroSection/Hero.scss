@@ -202,7 +202,7 @@
 
 @media (max-width: 640px) {
 	.HeroContainer {
-		height: 100vh;
+		height: fit-content;
 		.leftSection {
 			width: 95%;
 			.title {
@@ -222,7 +222,7 @@
 			}
 		}
 		.RightSection {
-			height: 35rem;
+			height: 20rem;
 			.box {
 				height: 200px;
 				width: 160px;
