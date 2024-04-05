@@ -48,10 +48,10 @@ const HomePage = () => {
 			<div id="testimonials" className="testimonials">
 				<Testimonials />
 			</div>
-			{/*<div className="youtube">
+			<div className="youtube">
 				<Youtube />
 			</div>
-			<div id="contact" className="contact">
+			{/*<div id="contact" className="contact">
 				<Contact />
 			</div>
 			<div className="footer">

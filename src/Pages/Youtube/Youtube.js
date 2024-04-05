@@ -3,6 +3,7 @@ import "./Youtube.scss";
 import ReactPlayer from "react-player";
 import { useData } from "../../Context/DataProvider";
 import { FaPlay, FaPause } from "react-icons/fa";
+import "./Youtube.scss";
 
 const Youtube = () => {
 	const data = useData();
@@ -36,6 +37,8 @@ const Youtube = () => {
 							light={false}
 							controls={true}
 							pip={true}
+							width={window.innerWidth <= 640 ? "100%" : ""}
+							height={window.innerWidth <= 640 ? "100%" : ""}
 						/>
 
 						{!video.url && (
@@ -46,9 +49,11 @@ const Youtube = () => {
 										<div>
 											<button onClick={() => handleTogglePlay()}>
 												{isPlaying ? (
-													<FaPause size={25} />
+													<FaPause
+														size={window.innerWidth <= 640 ? "20" : ""}
+													/>
 												) : (
-													<FaPlay size={25} />
+													<FaPlay size={window.innerWidth <= 640 ? "20" : ""} />
 												)}
 											</button>
 										</div>

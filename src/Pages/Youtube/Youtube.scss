@@ -69,3 +69,28 @@
 		width: 90%;
 	}
 }
+
+@media (max-width: 640px) {
+	.youtubeContainer {
+		width: 90%;
+		.video {
+			padding: 1rem 0;
+			width: 90%;
+			label {
+				@include fontStyle(1rem, 500, "");
+				top: 1rem;
+			}
+			.PlayPausebutton {
+				position: absolute;
+
+				.button {
+					position: relative;
+					div {
+						height: 50px;
+						width: 50px;
+					}
+				}
+			}
+		}
+	}
+}
