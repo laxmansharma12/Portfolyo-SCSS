@@ -3,8 +3,9 @@ import "./Navbar.scss";
 import { useData } from "../../Context/DataProvider";
 import Headroom from "react-headroom";
 import Hamburger from "hamburger-react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ dark, setDark }) => {
 	const data = useData();
 	const [isOpen, setOpen] = useState(false);
 	const ele = useRef();
@@ -21,7 +22,7 @@ const Navbar = () => {
 	});
 	return (
 		<Headroom>
-			<div className="Nav">
+			<div className={`Nav ${dark ? "dark" : "light"}`}>
 				<a href="#home" className="logo">
 					{data?.about?.name.substring(0, 1)}
 					<span>{data?.about?.name.substring(1, 2)}</span>
@@ -54,8 +55,13 @@ const Navbar = () => {
 						<li>
 							<a href="#contact">Contact</a>
 						</li>
+						<div className="modeToogler">
+							{!dark && <MdDarkMode size={20} onClick={() => setDark(!dark)} />}
+							{dark && <MdLightMode size={20} onClick={() => setDark(!dark)} />}
+						</div>
 					</ul>
 				</div>
+
 				<div className="mobileNav" ref={ele}>
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 					{isOpen && (
@@ -85,6 +91,30 @@ const Navbar = () => {
 								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#contact">Contact</a>
 								</li>
+								<div
+									className="MobilemodeToogler"
+									onClick={() => {
+										setDark(!dark);
+										setOpen(false);
+									}}
+								>
+									{!dark && (
+										<>
+											<span>
+												<MdDarkMode size={20} />
+											</span>
+											<span>Dark</span>
+										</>
+									)}
+									{dark && (
+										<>
+											<span>
+												<MdLightMode size={20} />
+											</span>
+											<span>Light</span>
+										</>
+									)}
+								</div>
 							</ul>
 						</div>
 					)}

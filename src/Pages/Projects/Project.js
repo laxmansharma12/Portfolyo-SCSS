@@ -63,6 +63,7 @@ const Project = ({ setOpenModal }) => {
 						<div
 							className="project"
 							key={index}
+							style={{ backgroundColor: "#fff" }}
 							onClick={() => setOpenModal({ state: true, project: project })}
 						>
 							<img src={project.image.url} alt={project.title} />

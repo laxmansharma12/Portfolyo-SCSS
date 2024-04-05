@@ -16,11 +16,12 @@ import Youtube from "../Youtube/Youtube";
 
 const HomePage = () => {
 	const [openModal, setOpenModal] = useState({ state: false, project: null });
+	const [dark, setDark] = useState(false);
 
 	return (
-		<div className="Home">
+		<div className={`Home ${dark ? "dark" : "light"}`}>
 			<div className="navbar">
-				<Navbar />
+				<Navbar dark={dark} setDark={setDark} />
 			</div>
 			<div id="home" className="topContainer">
 				<div id="hero" className="hero">

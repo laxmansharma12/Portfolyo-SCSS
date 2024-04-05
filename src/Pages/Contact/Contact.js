@@ -12,7 +12,10 @@ const Contact = () => {
 			<div className="divider">
 				<span>CONTACT</span>
 			</div>
-			<div className="contactInnerContainer">
+			<div
+				className="contactInnerContainer"
+				style={{ backgroundColor: "#fff" }}
+			>
 				<div className="contactTitles">
 					<h1>Get In Touch</h1>
 					<p>{data?.about?.subTitle}</p>

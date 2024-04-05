@@ -19,6 +19,9 @@
 	height: 60px;
 	position: sticky;
 	top: 0;
+	.light {
+		background-color: #ace0f9;
+	}
 	.logo {
 		@include fontStyle(20px, 700, "");
 		cursor: pointer;
@@ -119,6 +122,11 @@
 					color: #000;
 					text-decoration: none;
 					cursor: pointer;
+				}
+				.MobilemodeToogler {
+					@include flex(row, 10px, center, center);
+					@include fontStyle(1rem, 700, "");
+					margin-left: 0.7rem;
 				}
 			}
 		}

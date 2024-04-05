@@ -18,7 +18,11 @@ const Skills = () => {
 			<div className="SkillsInnerConatiner">
 				{sortedSkills &&
 					sortedSkills.map((skill, index) => (
-						<div className="item" key={index}>
+						<div
+							className="item"
+							style={{ backgroundColor: "#fff" }}
+							key={index}
+						>
 							<img src={skill?.image?.url} alt="" />
 							<div className="skillDetails">
 								<p className="skillName">{skill?.name}</p>

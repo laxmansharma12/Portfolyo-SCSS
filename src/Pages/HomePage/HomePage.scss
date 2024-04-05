@@ -56,15 +56,21 @@ p {
 	.contact {
 		width: 100%;
 	}
+	.navbar {
+		z-index: 1000;
+	}
+}
+
+.light {
 	.topContainer {
 		background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 	}
 	.midContainer {
 		background-image: linear-gradient(to top, #fff 0%, #fff1eb 100%);
 	}
-	.navbar {
-		z-index: 1000;
-	}
+}
+.dark {
+	background-color: #c6c3c1;
 }
 
 @media (max-width: 840px) {

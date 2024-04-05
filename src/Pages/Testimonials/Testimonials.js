@@ -67,7 +67,7 @@ const Testimonials = () => {
 					{enabledTestimonials &&
 						enabledTestimonials.map((testimonial, index) => (
 							<div className="testimonial" key={index}>
-								<div className="item">
+								<div className="item" style={{ backgroundColor: "#fff" }}>
 									<div className="left">
 										<img src={testimonial.image?.url} alt="" />
 										<label className="name">{testimonial.name}</label>
