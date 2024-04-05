@@ -28,3 +28,13 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.footerContainer {
+		height: 4rem;
+		.FooterInnerContainer {
+			@include fontStyle(0.8rem, "", "");
+			@include flex(column, 0.2rem, space-around, center);
+		}
+	}
+}

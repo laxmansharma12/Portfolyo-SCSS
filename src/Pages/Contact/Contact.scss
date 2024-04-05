@@ -158,3 +158,36 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+	.contactContainer {
+		height: fit-content;
+		margin-top: 3rem;
+		.contactInnerContainer {
+			@include flex(column, 2rem, space-around, start);
+			width: 90%;
+			padding: 0;
+			.contactTitles {
+				@include flex(column, 0, center, center);
+				text-align: center;
+				width: 80%;
+				h1 {
+					@include fontStyle(2rem, 700, "");
+				}
+			}
+			form {
+				width: 90%;
+				margin: auto;
+				.nameField,
+				.mailField {
+					width: 46.2%;
+				}
+				.messageField {
+					textarea {
+						width: 88.5%;
+					}
+				}
+			}
+		}
+	}
+}

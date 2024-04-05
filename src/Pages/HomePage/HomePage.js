@@ -51,7 +51,7 @@ const HomePage = () => {
 			<div className="youtube">
 				<Youtube />
 			</div>
-			{/*<div id="contact" className="contact">
+			<div id="contact" className="contact">
 				<Contact />
 			</div>
 			<div className="footer">
@@ -60,7 +60,7 @@ const HomePage = () => {
 			{openModal.state && (
 				<ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
 			)}
-			<Scrollbar /> */}
+			<Scrollbar />
 		</div>
 	);
 };
