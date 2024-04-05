@@ -20,8 +20,7 @@
 	position: sticky;
 	top: 0;
 	.logo {
-		font-size: 20px;
-		font-weight: 700;
+		@include fontStyle(20px, 700, "");
 		cursor: pointer;
 		color: #000;
 		text-decoration: none;
@@ -132,6 +131,9 @@
 
 @media (max-width: 640px) {
 	.Nav {
+		.logo {
+			@include fontStyle(25px, 700, "");
+		}
 		.mobNavItems {
 			position: absolute;
 			width: 40%;
