@@ -56,10 +56,10 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				<div className="mobileNav">
+				<div className="mobileNav" ref={ele}>
 					<Hamburger toggled={isOpen} toggle={setOpen} />
 					{isOpen && (
-						<div className="mobNavItems" ref={ele}>
+						<div className="mobNavItems">
 							<ul class="nav">
 								<li onClick={() => setOpen(!isOpen)}>
 									<a href="#about">About</a>
